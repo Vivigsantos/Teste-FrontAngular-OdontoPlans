@@ -1,23 +1,46 @@
-# 🦷 Projeto - OnePage de Planos Odontológicos com Angular
+# Projeto - OnePage de Planos Odontológicos com Angular
 
-Este projeto foi desenvolvido como parte de um teste técnico com o objetivo de avaliar habilidades em Angular, HTML5, CSS3 e integração com API REST.
+# Marlin Odontológico 🦷
 
-## 💻 Tecnologias Utilizadas
+Aplicação Angular para exibição e contratação de planos de saúde odontológicos. Desenvolvido como parte de um teste técnico com foco em usabilidade, filtros e responsividade.
 
-- Angular
-- HTML5
-- CSS3 / Tailwind CSS
-- TypeScript
-- JSON local para simular API
+## 🔗 Links
 
-## 🎯 Funcionalidades
+- [GitHub - Viviane Santos](https://github.com/Vivigsantos)
+- [LinkedIn - Viviane Santos](https://www.linkedin.com/in/viviane-santosads/)
 
-- Exibição de planos odontológicos via cards
-- Busca por nome do plano
-- Filtro por valor
+## 📌 Funcionalidades
+
+- Busca por nome ou descrição de plano
+- Ordenação por preço (crescente ou decrescente)
+- Listagem em cards com botão de contratação
 - Layout responsivo
-- Integração com "API" simulada via arquivo JSON
+- Testes com Jasmine + TestBed
 
-## 📷 Layout
+## 🚀 Tecnologias
 
-O layout foi seguido com base na imagem fornecida no desafio. A aplicação é responsiva e adaptável para diferentes tamanhos de tela.
+- Angular (Standalone)
+- TypeScript
+- HTML5 + SCSS
+- FormsModule (ngModel)
+- Testes Unitários
+
+## 🖼️ Layout
+
+Baseado em imagem de referência de uma landing page odontológica moderna e funcional.
+
+## 👩‍💻 Como executar
+
+```bash
+npm install
+ng serve
+Acesse: http://localhost:4200
+
+📁 Estrutura
+arduino
+Copy
+Edit
+home.component.ts       -> Lógica principal
+home.component.html     -> Layout da página
+home.component.scss     -> Estilo customizado
+home.component.spec.ts  -> Testes unitários

@@ -21,7 +21,7 @@ Aplicação Angular para exibição e contratação de planos de saúde odontol�
 
 - Angular (Standalone)
 - TypeScript
-- HTML5 + SCSS
+- HTML5 + CSS(Saas)
 - FormsModule (ngModel)
 - Testes Unitários
 

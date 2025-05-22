@@ -1,0 +1,72 @@
+<!-- Cabeçalho principal com logo e menu de navegação -->
+<header class="header">
+  <div class="container">
+    <img src="assets/logo.png" alt="Logo Marlin" class="logo" />
+    
+    <!-- Navegação principal do site -->
+    <nav class="menu">
+      <a href="#">Início</a>
+      <a href="#">Planos</a>
+      <a href="#">Contato</a>
+      <button class="login-button">Login</button>
+    </nav>
+  </div>
+</header>
+
+<!-- Seção de destaque com chamada principal -->
+<section class="banner">
+  <div class="container">
+    <div class="text">
+      <h1>Marlin Odontológico</h1>
+      <p>Planos de saúde odontológico com custos acessíveis feitos na medida certa!</p>
+      <h2>A partir de <strong>R$ 30,00</strong></h2>
+      <button class="primary-button">Ver Planos!</button>
+    </div>
+
+    <!-- Imagem ilustrativa do banner -->
+    <div class="image">
+      <img src="assets/banner-woman.png" alt="Mulher sorrindo" />
+    </div>
+  </div>
+</section>
+
+<!-- Seção de planos odontológicos com filtros -->
+<section class="planos">
+  <div class="container">
+    <h2>Encontre o Plano Odontológico Ideal</h2>
+
+    <!-- Filtros de busca e ordenação -->
+    <div class="filtros">
+      <input
+        type="text"
+        [(ngModel)]="busca"
+        (ngModelChange)="filtrarPlanos()"
+        class="campo-busca"
+        placeholder="Buscar plano por nome ou descrição..."
+      />
+
+      <select [(ngModel)]="filtroPreco" (ngModelChange)="ordenarPlanos()">
+        <option value="">Ordenar por preço</option>
+        <option value="asc">Menor preço</option>
+        <option value="desc">Maior preço</option>
+      </select>
+    </div>
+
+    <!-- Listagem dos planos disponíveis -->
+    <div class="plano-grid">
+      
+      <!-- Mensagem quando não há resultados -->
+      <div *ngIf="planosFiltrados.length === 0" class="mensagem-vazia">
+        Nenhum plano encontrado com os critérios informados.
+      </div>
+
+      <!-- Cartões individuais de cada plano -->
+      <div class="plano-card" *ngFor="let plano of planosFiltrados">
+        <h3>{{ plano.nome }}</h3>
+        <p class="descricao">{{ plano.descricao }}</p>
+        <p class="preco">R$ {{ plano.preco | number:'1.2-2' }}</p>
+        <button class="contratar">Contratar</button>
+      </div>
+    </div>
+  </div>
+</section>
